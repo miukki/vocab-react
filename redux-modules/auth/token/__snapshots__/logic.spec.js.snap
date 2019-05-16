@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Token delete JWT dispatch RESET_STATE when signOut 1`] = `
+Array [
+  Object {
+    "type": "auth/token/DELETE_JWT",
+  },
+  Object {
+    "routeName": "Login",
+    "type": "Navigation/NAVIGATE",
+  },
+  Object {
+    "type": "auth/signUp/RESET_STATE",
+  },
+  Object {
+    "type": "auth/forgotPassword/RESET_STATE",
+  },
+  Object {
+    "type": "auth/completeProfile/RESET_STATE",
+  },
+  Object {
+    "type": "auth/signIn/RESET_STATE",
+  },
+]
+`;

@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`signIn checkMobile allow action when mobile OK 1`] = `
+Array [
+  Object {
+    "type": "auth/signIn/SUBMIT",
+  },
+  Object {
+    "type": "auth/signIn/SUBMIT_DONE",
+  },
+  Object {
+    "payload": Object {
+      "jwt": "jwt-token",
+    },
+    "type": "auth/token/SET_JWT",
+  },
+  Object {
+    "routeName": "Tab",
+    "type": "Navigation/NAVIGATE",
+  },
+]
+`;
+
+exports[`signIn checkMobile reject action when mobile length wrong 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "errorTypes": Array [
+        Object {
+          "errorType": "wrongMobile",
+        },
+      ],
+    },
+    "type": "auth/signIn/SHOW_ERROR",
+  },
+]
+`;
+
+exports[`signIn requestJWT dispatch SHOW_ERROR when networkError 1`] = `
+Array [
+  Object {
+    "type": "auth/signIn/SUBMIT",
+  },
+  Object {
+    "payload": Object {
+      "errorTypes": Array [
+        Object {
+          "errorType": "networkError",
+        },
+      ],
+    },
+    "type": "auth/signIn/SHOW_ERROR",
+  },
+]
+`;
+
+exports[`signIn requestJWT dispatch SHOW_ERROR when serverError 1`] = `
+Array [
+  Object {
+    "type": "auth/signIn/SUBMIT",
+  },
+  Object {
+    "payload": Object {
+      "errorTypes": Array [
+        Object {
+          "errorType": "serverError",
+        },
+      ],
+    },
+    "type": "auth/signIn/SHOW_ERROR",
+  },
+]
+`;
+
+exports[`signIn requestJWT dispatch SHOW_ERROR when userPasswordMismatch 1`] = `
+Array [
+  Object {
+    "type": "auth/signIn/SUBMIT",
+  },
+  Object {
+    "payload": Object {
+      "errorTypes": Array [
+        Object {
+          "errorType": "userPasswordMismatch",
+        },
+      ],
+    },
+    "type": "auth/signIn/SHOW_ERROR",
+  },
+]
+`;
+
+exports[`signIn requestJWT request JWT from API and set it to storage 1`] = `
+Array [
+  "18000000000",
+  "Qweasdzxc123!!!",
+]
+`;
+
+exports[`signIn requestJWT request JWT from API and set it to storage 2`] = `
+Array [
+  "jwt-token",
+]
+`;
+
+exports[`signIn requestJWT request JWT from API and set it to storage 3`] = `
+Array [
+  Object {
+    "type": "auth/signIn/SUBMIT",
+  },
+  Object {
+    "type": "auth/signIn/SUBMIT_DONE",
+  },
+  Object {
+    "payload": Object {
+      "jwt": "jwt-token",
+    },
+    "type": "auth/token/SET_JWT",
+  },
+  Object {
+    "routeName": "Tab",
+    "type": "Navigation/NAVIGATE",
+  },
+]
+`;

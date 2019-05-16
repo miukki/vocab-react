@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`wordListPicker reducer should handle SELECT_ITEM 1`] = `
+Immutable.Map {
+  items: Immutable.List [
+    Immutable.Map {
+      title: "IELTS Listening",
+      onPress: [Function],
+      progress: 0,
+    },
+    Immutable.Map {
+      title: "IELTS Reading",
+      onPress: [Function],
+      progress: 10,
+    },
+    Immutable.Map {
+      title: "IELTS Writing",
+      onPress: [Function],
+      progress: 20,
+    },
+    Immutable.Map {
+      title: "IELTS Speaking",
+      onPress: [Function],
+      progress: 30,
+    },
+    Immutable.Map {
+      title: "TOEFL Listening",
+      onPress: [Function],
+      progress: 40,
+    },
+    Immutable.Map {
+      title: "TOEFL Reading",
+      onPress: [Function],
+      progress: 50,
+    },
+    Immutable.Map {
+      title: "TOEFL Writing",
+      onPress: [Function],
+      progress: 60,
+    },
+    Immutable.Map {
+      title: "TOEFL Speaking",
+      onPress: [Function],
+      progress: 70,
+    },
+  ],
+}
+`;
+
+exports[`wordListPicker reducer should return the initial state 1`] = `"{\\"pressable\\":false,\\"items\\":[]}"`;

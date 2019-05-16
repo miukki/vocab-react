@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.slim.js"></script>
+    <title>点击下载应用</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      *{margin:0; padding:0; text-align: center;}
+      a{text-decoration: none;}
+      img{max-width: 100%; height: auto;}
+      .weixin-tip{display: none; position: fixed; left:0; top:0; bottom:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80);  height: 100%; width: 100%; z-index: 100;}
+      .weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}
+      .companion-android{display: none;}
+      .companion-ios{display:none;}
+      .footer-button{position: absolute; right: 0; bottom: 0; left: 0; padding: 0 20px 50px;}
+      .outter {display: table; position: absolute; height: 100%; width: 100%;}
+      .middle {display: table-cell; vertical-align: middle;}
+      .inner {margin-left: auto; margin-right: auto; min-width: 300px;}
+      .app-icon {height: 88px; width: 90px;}
+      .app-title {margin-top: 20px;}
+      .app-background {background-image: url("background.png"); background-repeat: no-repeat; background-size: cover;}
+    </style>
+    <script type="text/javascript">
+      $(window).on("load",function(){
+        var winHeight = $(window).height();
+        function is_weixin() {
+          var ua = navigator.userAgent.toLowerCase();
+          if (ua.match(/MicroMessenger/i) == "micromessenger") {
+              return true;
+          } else {
+              return false;
+          }
+        }
+        var isWeixin = is_weixin();
+        if(isWeixin){
+          $(".weixin-tip").css("height",winHeight);
+          $(".weixin-tip").show();
+        }
+        var isMobile = {
+          Android: function() {
+              return navigator.userAgent.match(/Android/i);
+          },
+          BlackBerry: function() {
+              return navigator.userAgent.match(/BlackBerry/i);
+          },
+          iOS: function() {
+              return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+          },
+          Opera: function() {
+              return navigator.userAgent.match(/Opera Mini/i);
+          },
+          Windows: function() {
+              return navigator.userAgent.match(/IEMobile/i);
+          },
+          any: function() {
+              return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+          }
+        };
+        if ( isMobile.Android() ) {
+          $('.companion-android').css('display','inline-block');
+          $('.companion-ios').hide();
+        } else if(isMobile.iOS()) {
+          $('.companion-android').hide();
+          $('.companion-ios').css('display','inline-block');
+        } else {
+          $('.companion-android').css('display','inline-block');
+          $('.companion-ios').hide();
+        }
+      })
+    </script>
+  </head>
+  <body class="app-background">
+    <div class="companion-android">
+      <div class="weixin-tip">
+        <p>
+          <img src="live_weixin.png" alt="微信打开"/>
+        </p>
+      </div>
+    </div>
+    <div>
+      <div class="outter">
+        <div class="middle">
+          <div class="inner">
+            <img class="app-icon" alt="Vocabsmith" src="app-logo.png">
+            </div>
+            <h2 class="text-secondary app-title">启德词汇史密斯<br>APP</h1>
+          </div>
+        </div>
+      </div>
+      <div class="footer-button">
+        <a class="companion-ios btn btn-danger btn-lg btn-block" href="https://itunes.apple.com/app/ielts-powerup/id1367115806?mt=8">
+          App Store 下载
+        </a>
+        <a class="companion-android btn btn-danger btn-lg btn-block " href="http://vocab-app.prepsmith.com/prepsmith.apk">
+          马上下载
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

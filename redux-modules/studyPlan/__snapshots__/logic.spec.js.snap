@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`studyPlan logic addCheckinLog dispatch ADD_CHECKIN_LOG 1`] = `
+Object {
+  "payload": Object {
+    "checkinLog": "20180518$IELTS Listening$20",
+  },
+  "type": "eic-vocab-app/studyPlan/ADD_CHECKIN_LOG",
+}
+`;
+
+exports[`studyPlan logic addCheckinLog dispatch ADD_CHECKIN_LOG 2`] = `
+Object {
+  "payload": Object {
+    "checkinLogs": Set {
+      "20180501$IELTS Listening$15",
+      "20180518$IELTS Listening$20",
+    },
+  },
+  "type": "eic-vocab-app/studyPlan/UPDATE_CHECKIN_LOGS",
+}
+`;
+
+exports[`studyPlan logic addCheckinLog dispatch ADD_CHECKIN_LOG 3`] = `
+Object {
+  "payload": Object {
+    "checkinLogs": Set {
+      "20180501$IELTS Listening$15",
+      "20180518$IELTS Listening$20",
+    },
+    "dailyWordsAmountOfWordsList": Object {
+      "IELTS Listening": 20,
+    },
+    "learnedWords": undefined,
+    "wordsListUid": "IELTS Listening",
+  },
+  "type": "eic-vocab-app/studyPlan/UPDATE_USER_DATA",
+}
+`;
+
+exports[`studyPlan logic adjustDailyWordsPicker dispatch UPDATE_PICKER_DAILY_WORDS_AMOUNT with dailyWordsAmount of current wordsListUid 1`] = `
+Object {
+  "payload": Object {
+    "dailyWordsAmount": 20,
+  },
+  "type": "eic-vocab-app/studyPlan/UPDATE_PICKER_DAILY_WORDS_AMOUNT",
+}
+`;
+
+exports[`studyPlan logic adjustDailyWordsPicker dispatch UPDATE_PICKER_DAILY_WORDS_AMOUNT with default value of dailyWordsAmount when dailyWordsAmount of current wordsListUid has not been set yet 1`] = `
+Object {
+  "payload": Object {
+    "dailyWordsAmount": 15,
+  },
+  "type": "eic-vocab-app/studyPlan/UPDATE_PICKER_DAILY_WORDS_AMOUNT",
+}
+`;
+
+exports[`studyPlan logic updateUserData dispatch UPDATE_USER_DATA with new dailyWordsAmountOfWordsList when dailyWordsAmount be specified 1`] = `
+Object {
+  "payload": Object {
+    "checkinLogs": Array [],
+    "dailyWordsAmount": 40,
+    "dailyWordsAmountOfWordsList": Object {
+      "IELTS Speaking": 40,
+      "IELTS Writing": 20,
+    },
+    "learnedWords": Array [],
+    "wordsListUid": "IELTS Speaking",
+  },
+  "type": "eic-vocab-app/studyPlan/UPDATE_USER_DATA",
+}
+`;

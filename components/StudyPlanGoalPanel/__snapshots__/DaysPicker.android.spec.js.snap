@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`description render 1`] = `
+<View
+  style={null}
+>
+  <RCTPicker
+    items={
+      Array [
+        Object {
+          "label": "5 words",
+          "textColor": undefined,
+          "value": 5,
+        },
+        Object {
+          "label": "10 words",
+          "textColor": undefined,
+          "value": 10,
+        },
+        Object {
+          "label": "15 words",
+          "textColor": undefined,
+          "value": 15,
+        },
+        Object {
+          "label": "20 words",
+          "textColor": undefined,
+          "value": 20,
+        },
+        Object {
+          "label": "25 words",
+          "textColor": undefined,
+          "value": 25,
+        },
+        Object {
+          "label": "30 words",
+          "textColor": undefined,
+          "value": 30,
+        },
+        Object {
+          "label": "40 words",
+          "textColor": undefined,
+          "value": 40,
+        },
+      ]
+    }
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    selectedIndex={3}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;

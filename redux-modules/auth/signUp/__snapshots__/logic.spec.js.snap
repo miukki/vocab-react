@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`signUp checkMobile allow action when mobile OK 1`] = `
+Array [
+  Object {
+    "type": "auth/signUp/SUBMIT",
+  },
+  Object {
+    "payload": Object {
+      "jwt": "jwt-token",
+    },
+    "type": "auth/token/SET_JWT",
+  },
+  Object {
+    "type": "auth/signUp/SUBMIT_DONE",
+  },
+]
+`;
+
+exports[`signUp checkMobile reject action when mobile length wrong when SEND_VCODE 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "errorTypes": Array [
+        Object {
+          "errorType": "wrongMobile",
+        },
+      ],
+    },
+    "type": "auth/signUp/SHOW_ERROR",
+  },
+]
+`;
+
+exports[`signUp checkMobile reject action when mobile length wrong when SUBMIT 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "errorTypes": Array [
+        Object {
+          "errorType": "wrongVcode",
+        },
+        Object {
+          "errorType": "wrongMobile",
+        },
+        Object {
+          "errorType": "weakPassword",
+        },
+      ],
+    },
+    "type": "auth/signUp/SHOW_ERROR",
+  },
+]
+`;
+
+exports[`signUp sendSMS dispatch SHOW_ERROR when networkError 1`] = `
+Array [
+  Object {
+    "type": "auth/signUp/SEND_VCODE",
+  },
+  Object {
+    "payload": Object {
+      "errorTypes": Array [
+        Object {
+          "errorType": "networkError",
+        },
+      ],
+    },
+    "type": "auth/signUp/SHOW_ERROR",
+  },
+]
+`;
+
+exports[`signUp sendSMS dispatch SHOW_ERROR when serverError 1`] = `
+Array [
+  Object {
+    "type": "auth/signUp/SEND_VCODE",
+  },
+  Object {
+    "payload": Object {
+      "errorTypes": Array [
+        Object {
+          "errorType": "serverError",
+        },
+      ],
+    },
+    "type": "auth/signUp/SHOW_ERROR",
+  },
+]
+`;
+
+exports[`signUp sendSMS request IAM API send vcode SMS 1`] = `
+Array [
+  "18000000000",
+]
+`;
+
+exports[`signUp sendSMS request IAM API send vcode SMS 2`] = `
+Array [
+  Object {
+    "type": "auth/signUp/SEND_VCODE",
+  },
+  Object {
+    "type": "auth/signUp/SEND_VCODE_DONE",
+  },
+]
+`;
+
+exports[`signUp signUp dispatch SHOW_ERROR when networkError 1`] = `
+Array [
+  Object {
+    "type": "auth/signUp/SUBMIT",
+  },
+  Object {
+    "payload": Object {
+      "errorTypes": Array [
+        Object {
+          "errorType": "networkError",
+        },
+      ],
+    },
+    "type": "auth/signUp/SHOW_ERROR",
+  },
+]
+`;
+
+exports[`signUp signUp dispatch SHOW_ERROR when serverError 1`] = `
+Array [
+  Object {
+    "type": "auth/signUp/SUBMIT",
+  },
+  Object {
+    "payload": Object {
+      "errorTypes": Array [
+        Object {
+          "errorType": "serverError",
+        },
+      ],
+    },
+    "type": "auth/signUp/SHOW_ERROR",
+  },
+]
+`;
+
+exports[`signUp signUp dispatch SHOW_ERROR when wrongVcode 1`] = `
+Array [
+  Object {
+    "type": "auth/signUp/SUBMIT",
+  },
+  Object {
+    "payload": Object {
+      "errorTypes": Array [
+        Object {
+          "errorType": "wrongVcode",
+        },
+      ],
+    },
+    "type": "auth/signUp/SHOW_ERROR",
+  },
+]
+`;
+
+exports[`signUp signUp request JWT from API and set it to storage 1`] = `
+Array [
+  "666666",
+  "18000000000",
+  "Qweasdzxc123!!!",
+]
+`;
+
+exports[`signUp signUp request JWT from API and set it to storage 2`] = `
+Array [
+  "jwt-token",
+]
+`;
+
+exports[`signUp signUp request JWT from API and set it to storage 3`] = `
+Array [
+  Object {
+    "type": "auth/signUp/SUBMIT",
+  },
+  Object {
+    "payload": Object {
+      "jwt": "jwt-token",
+    },
+    "type": "auth/token/SET_JWT",
+  },
+  Object {
+    "type": "auth/signUp/SUBMIT_DONE",
+  },
+]
+`;

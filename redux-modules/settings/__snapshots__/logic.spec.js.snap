@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`settings saveLocation set location to storage 1`] = `
+Array [
+  "fake_location",
+]
+`;
+
+exports[`settings saveLocation set location to storage 2`] = `
+Array [
+  Object {
+    "payload": Object {
+      "location": "fake_location",
+    },
+    "type": "@@settings/UPDATE_LOCATION",
+  },
+]
+`;

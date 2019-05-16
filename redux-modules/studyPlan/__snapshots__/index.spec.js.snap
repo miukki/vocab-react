@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`studyPlan redux should return the initial state 1`] = `
+Immutable.Map {
+  wordsListUid: "",
+  learnedWords: Set {},
+  checkinLogs: Set {},
+  dailyWordsAmountOfWordsList: Immutable.Map {
+  },
+  picker: Immutable.Map {
+    dailyWordsAmount: 15,
+  },
+  currentDate: null,
+}
+`;
+
+exports[`studyPlan redux should update currentDate 1`] = `
+Object {
+  "checkinLogs": Set {},
+  "currentDate": "2018-05-01",
+  "dailyWordsAmountOfWordsList": Object {},
+  "learnedWords": Set {},
+  "picker": Object {
+    "dailyWordsAmount": 15,
+  },
+  "wordsListUid": "",
+}
+`;

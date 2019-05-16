@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Vocabsmith",
+    "splash": {
+      "image": "./img/splash.png",
+      "backgroundColor": "#FFFFFF"
+    },
+    "slug": "vocabsmith",
+    "version": "1.3.0",
+    "sdkVersion": "26.0.0",
+    "android": {
+      "versionCode": 1,
+      "icon": "./img/icon-android.png",
+      "package": "com.npathway.IELTSPowerUp"
+    },
+    "ios": {
+      "buildNumber": "1",
+      "icon": "./img/icon.png",
+      "bundleIdentifier": "com.npathway.IELTSPowerUp",
+      "loadJSInBackgroundExperimental": true
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#FFFFFF"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "updates": {
+      "enabled": false,
+      "checkAutomatically": "ON_ERROR_RECOVERY",
+      "fallbackToCacheTimeout": 0
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "miukki",
+            "project": "vocab-app",
+            "authToken": "your auth token here"
+          }
+        }
+      ]
+    }
+  }
+}

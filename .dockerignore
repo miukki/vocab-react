@@ -1,0 +1,6 @@
+node_modules
+.expo
+README.md
+docker
+.git
+.dockerignore

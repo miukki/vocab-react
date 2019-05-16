@@ -1,0 +1,10 @@
+node_modules/
+.expo/
+npm-debug.*
+coverage/
+.expo-source/
+package-lock.json
+*.sublime-workspace
+tmp_*
+config.js
+yarn-error.log

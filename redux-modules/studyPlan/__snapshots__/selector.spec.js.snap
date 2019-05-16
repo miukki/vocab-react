@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`studyPlan selector selectCheckinLogs select selectCheckinLogs 1`] = `
+Array [
+  "20180530",
+]
+`;
+
+exports[`studyPlan selector selectCheckinLogs select selectCheckinLogs 2`] = `
+Array [
+  "20180501",
+  "20180530",
+]
+`;

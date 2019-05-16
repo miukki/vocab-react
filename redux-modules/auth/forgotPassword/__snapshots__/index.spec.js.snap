@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`signIn redux should return the initial state 1`] = `
+Immutable.Map {
+  mobile: "",
+  vcode: "",
+  submitting: false,
+  error: Immutable.Map {
+    hitRateLimit: false,
+    userNotExist: false,
+    wrongMobile: false,
+    wrongVcode: false,
+    weakPassword: false,
+  },
+  vcodeCountdown: 0,
+  vcodeSentAt: null,
+  vcodeSending: false,
+  showPassword: false,
+  password: "",
+  show: false,
+}
+`;
+
+exports[`signIn redux should set error 1`] = `
+Object {
+  "error": Object {
+    "hitRateLimit": false,
+    "userNotExist": false,
+    "weakPassword": false,
+    "wrongMobile": true,
+    "wrongVcode": false,
+  },
+  "mobile": "",
+  "password": "",
+  "show": false,
+  "showPassword": false,
+  "submitting": false,
+  "vcode": "",
+  "vcodeCountdown": 120,
+  "vcodeSending": false,
+  "vcodeSentAt": null,
+}
+`;
+
+exports[`signIn redux should set vcodeCountdown 1`] = `0`;

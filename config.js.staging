@@ -1,0 +1,13 @@
+export default {
+  IAM: {
+    baseURL: 'https://account.staging.prepsmith.com',
+    clientId: 'MMGKoMDU1/BY8NQp4SFIKw'
+  },
+  dataService: {
+    // baseURL: 'http://localhost:3000',
+    baseURL: 'https://vocab-api.staging.prepsmith.com',
+    version: 'v1'
+  },
+  amountFlipCards: 30,
+  smsCountDownSeconds: 120
+}

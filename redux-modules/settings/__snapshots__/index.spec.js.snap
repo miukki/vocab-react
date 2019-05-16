@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`signIn redux should return the initial state 1`] = `
+Immutable.Map {
+  location: null,
+}
+`;
+
+exports[`signIn redux should update location 1`] = `
+Object {
+  "location": "fake_location",
+}
+`;
